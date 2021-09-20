@@ -28,6 +28,8 @@ body {
 /* обнуляція списку */
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* ссилки */
@@ -46,6 +48,14 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+/* верхня лінія */
+.page-header {
+  margin-bottom: 94px;
+  margin-top: 0;
 }
 
 /* логотип */
@@ -88,6 +98,9 @@ body {
 /* герой */
 .hero {
   background-color: var(--bg-color);
+  padding: 280px 252px;
+  text-align: center;
+  margin-bottom: 94px;
 }
 
 .hero-title {
@@ -95,8 +108,11 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
+  min-width: 696px;
+  padding: 0;
+  margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .button-primary {
@@ -106,9 +122,17 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  display: inline-block;
+  align-items: center;
+  padding: 10px 32px;
+  min-width: 200px;
+  border-radius: 4px;
+  margin-bottom: 200px;
+  text-transform: uppercase;
   letter-spacing: 0.06em;
   cursor: pointer;
-  border: none;
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .button-primary:hover,
@@ -118,12 +142,25 @@ body {
 }
 
 /* функції */
+.feature {
+  margin-bottom: 94px;
+}
 .feature-items .title {
   color: var(--text-color);
   font-weight: 700;
   font-size: inherit;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.feature-items .paragraf {
+  margin: 0;
+}
+
+/* чим ми займаємося */
+.section {
+  margin-bottom: 188px;
 }
 
 /* команда */
@@ -133,12 +170,15 @@ body {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 .team-items .text {
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  margin: 0;
 }
 
 /* футер */
@@ -167,6 +207,10 @@ body {
 }
 
 /* портфоліо кнопки*/
+.button {
+  margin-bottom: 34px;
+  margin-top: 0;
+}
 
 .button-secondary {
   background-color: var(--secondary-bg-color);
@@ -174,9 +218,13 @@ body {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
+  display: inline-block;
+  padding: 6px 22px;
+  text-align: center;
+  border: transparent;
+  border-radius: 4px;
   line-height: 1.62;
   cursor: pointer;
-  border: none;
 }
 
 .button-secondary:hover,
@@ -188,9 +236,29 @@ body {
 .button-secondary.current {
   background-color: var(--accent-color);
   color: var(--text-white-color);
+  min-width: 73px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.button-secondary.web {
+  min-width: 128px;
+}
+.button-secondary.application {
+  min-width: 145px;
+}
+
+.button-secondary.desing {
+  min-width: 103px;
+}
+.button-secondary.marketing {
+  min-width: 130px;
 }
 
 /* картинки портфоліо */
+.portfolio {
+  margin-bottom: 94px;
+  margin-top: 0;
+}
 
 .images-items {
   color: var(--basic-text-color);
@@ -205,4 +273,9 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+.images-items-text {
+  margin: 0;
 }
