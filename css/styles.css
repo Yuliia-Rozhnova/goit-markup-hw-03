@@ -52,12 +52,6 @@ body {
   margin-top: 0;
 }
 
-/* верхня лінія */
-.page-header {
-  margin-bottom: 94px;
-  margin-top: 0;
-}
-
 /* логотип */
 .logo {
   color: var(--accent-color);
@@ -278,4 +272,9 @@ body {
 }
 .images-items-text {
   margin: 0;
+}
+/* верхня лінія */
+.page-header .portfolio {
+  margin-bottom: 94px;
+  margin-top: 0;
 }
