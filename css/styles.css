@@ -20,8 +20,9 @@ body {
 
 .container {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
   outline: 4px solid red;
 }
 
@@ -30,11 +31,15 @@ body {
   padding-bottom: 94px;
 }
 
+.img {
+  display: block;
+}
 /* знімаємо маржини з заголовків і абзаців */
 h1,
 h2,
 h3,
 p {
+  padding: 0;
   margin: 0;
 }
 
@@ -61,7 +66,7 @@ p {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 /* логотип */
@@ -115,16 +120,20 @@ p {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  display: inline-block;
+  display: flex;
   min-width: 696px;
-  margin-top: 200px;
-  margin-left: 252px;
+  padding-top: 200px;
+  padding-left: 252px;
+  padding-right: 252px;
   margin-bottom: 40px;
-  margin-right: 252px;
   border: 1px solid #000000;
 }
 
 /* функції */
+
+.feature {
+  
+}
 
 .feature-items .title {
   color: var(--text-color);
@@ -132,11 +141,12 @@ p {
   font-size: inherit;
   line-height: 1.14;
   text-transform: uppercase;
-  padding-bottom: 10px;
-  margin-top: 0;
-}
 
 /* чим ми займаємося */
+
+.work {
+  padding-top: 0;
+}
 
 /* команда */
 .team-items .title {
@@ -144,8 +154,6 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  text-align: center;
-  padding-bottom: 10px;
 }
 .team-items .text {
   color: var(--text-color);
@@ -153,11 +161,14 @@ p {
   line-height: 1.18;
   text-align: center;
 }
+.team-items .img {
+}
 
 /* футер */
 .footer {
   background-color: var(--bg-color);
   line-height: 1.71;
+  padding-top: 0;
 }
 
 .footer-address {
@@ -217,7 +228,6 @@ p {
   line-height: 1.62;
 
   padding: 6px 22px;
-  margin-bottom: 34px;
   text-align: center;
   border: transparent;
 }
@@ -235,21 +245,24 @@ p {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.button .secondary.web {
+.button .secondary .web {
   min-width: 128px;
 }
-.button .secondary.application {
+.button .secondary .application {
   min-width: 145px;
 }
 
-.button .secondary.desing {
+.button .secondary .desing {
   min-width: 103px;
 }
-.button .secondary.marketing {
+.button .secondary .marketing {
   min-width: 130px;
 }
-
+.button .secondary :nth-last-child() {
+  margin-bottom: 34px;
+}
 /* картинки портфоліо */
+.portfolio {}
 
 .images-items {
   color: var(--basic-text-color);
@@ -264,7 +277,7 @@ p {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-bottom: 4px;
+ 
 }
-
+.card {}
 /* верхня лінія */
