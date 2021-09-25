@@ -6,6 +6,7 @@
   --secondary-bg-color: #f5f4fa;
   --bg-color: #2f303a;
   --text-white-color: #ffffff;
+  --card-set-marg: 30px;
 }
 
 body {
@@ -19,11 +20,10 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 1230px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 4px solid red;
 }
 
 .section {
@@ -72,10 +72,24 @@ p {
   text-align: center;
 }
 
+/* кнопки */
+.button {
+  display: flex;
+  border-radius: 4px;
+  margin-top: 0;
+  justify-content: center;
+
+  font-family: inherit;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+}
+
 /* хедер */
 .header-container {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid#ececec;
 }
 
 /* логотип */
@@ -137,9 +151,9 @@ p {
 
 /* герой */
 .hero {
+  display: flex;
   background-color: var(--bg-color);
   text-align: center;
-  display: flex;
 }
 
 .hero-title {
@@ -152,13 +166,41 @@ p {
 
   min-width: 696px;
   padding-top: 200px;
-  padding-left: 252px;
-  padding-bottom: 230px;
-  padding-right: 252px;
+  padding-left: 250px;
+  padding-right: 250px;
+  margin-bottom: 30px;
+}
+.primary {
+  background-color: var(--accent-color);
+  color: var(--text-white-color);
+  font-weight: 700;
+  line-height: 1.87;
+
+  padding: 10px 32px;
+  min-width: 200px;
   margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.button .primary:hover,
+.button .primary:focus {
+  background-color: var(--accent-color);
+  color: var(--text-white-color);
 }
 
 /* функції */
+
+.feature-items {
+  display: flex;
+}
+
+.feature-content:not(:last-child) {
+  margin-right: var(--card-set-marg);
+  max-width: 270px;
+}
 
 .feature-items .title {
   color: var(--text-color);
@@ -171,29 +213,29 @@ p {
 /* чим ми займаємося */
 
 .work {
-  padding-top: 0;
   display: flex;
-  margin-left: -30px;
-  margin-top: 30px;
+  padding-top: 0;
+  margin-left: calc(-1 * var(--card-set-marg));
+  margin-top: calc(-1 * var(--card-set-marg));
 }
 .work-items {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  flex-basis: calc(100% / 3 - var(--card-set-marg));
+  margin-left: var(--card-set-marg);
+  margin-top: var(--card-set-marg);
 }
 
 /* команда */
 
 .team-items {
   display: flex;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-left: calc(-1 * var(--card-set-marg));
+  margin-top: calc(-1 * var(--card-set-marg));
 }
 
 .items-card {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  flex-basis: calc(100% / 4 - var(--card-set-marg));
+  margin-left: var(--card-set-marg);
+  margin-top: var(--card-set-marg);
   overflow: hidden;
 }
 
@@ -220,15 +262,17 @@ p {
 }
 
 .card-bottom {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: var(--card-set-marg);
+  padding-bottom: var(--card-set-marg);
 }
 
 /* футер */
 .footer {
   background-color: var(--bg-color);
   line-height: 1.71;
+
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-logo {
   margin-bottom: 20px;
@@ -236,11 +280,13 @@ p {
 .footer-address {
   color: var(--text-white-color);
   text-decoration: none;
+  font-style: normal;
 }
 
 .footer-contacts {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  font-style: normal;
 }
 .footer-address:hover,
 .footer-address:focus {
@@ -250,39 +296,6 @@ p {
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent-color);
-}
-
-/* портфоліо кнопки*/
-.button {
-  font-family: inherit;
-  font-size: 16px;
-  align-items: center;
-  display: flex;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 0;
-  justify-content: center;
-}
-.primary {
-  background-color: var(--accent-color);
-  color: var(--text-white-color);
-  font-weight: 700;
-  line-height: 1.87;
-
-  padding: 10px 32px;
-  min-width: 200px;
-  margin-bottom: 200px;
-  margin: 0 auto;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  border: 1px solid #000000;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.button .primary:hover,
-.button .primary:focus {
-  background-color: var(--accent-color);
-  color: var(--text-white-color);
 }
 
 /* фільтер портфоліо */
@@ -314,35 +327,35 @@ p {
 .button .secondary.current {
   background-color: var(--accent-color);
   color: var(--text-white-color);
-  min-width: 73px;
+  max-width: 73px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button .secondary .web {
-  min-width: 128px;
+  max-width: 128px;
 }
 .button .secondary .application {
-  min-width: 145px;
+  max-width: 145px;
 }
 
 .button .secondary .desing {
-  min-width: 103px;
+  max-width: 103px;
 }
 .button .secondary .marketing {
-  min-width: 130px;
+  max-width: 130px;
 }
 
 /* картинки портфоліо */
 
 .images-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-marg));
+  margin-top: calc(-1 * var(--card-set-marg));
+
   color: var(--basic-text-color);
   font-size: 16px;
   line-height: 1.87;
-
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -26px;
-  margin-top: -26px;
 }
 
 .images-items-title {
@@ -356,15 +369,14 @@ p {
 }
 
 .card-set {
-  flex-basis: calc(100% / 3 - 26);
-  margin-left: 26px;
-  margin-top: 26px;
-
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
+  flex-basis: calc(100% / 3 - var(--card-set-marg));
+  margin-left: var(--card-set-marg);
+  margin-top: var(--card-set-marg);
 }
 
 .portfolio-bottom {
   padding: 20px 25px 20px 25px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
 }
