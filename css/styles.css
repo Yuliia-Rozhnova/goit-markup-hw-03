@@ -47,7 +47,7 @@ p {
 }
 
 /* обнуляція списку */
-.list {
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -90,11 +90,14 @@ p {
 .header-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid#ececec;
 }
 
+.page-header {
+  border-bottom: 1px solid#ececec;
+}
 /* логотип */
 .logo {
+  display: block;
   color: var(--accent-color);
   text-decoration: none;
   font-family: Raleway, sans-serif;
@@ -103,27 +106,35 @@ p {
   line-height: 1.19;
   letter-spacing: 0.03em;
   margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .logo-studio {
   color: #000000;
 }
+/* логотип футер */
 
 .logo-white {
   color: var(--text-white-color);
 }
 
+.logo-bottom {
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
+
+.header-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 /* навигація */
 .site-nav {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .site-nav .link:hover,
@@ -138,8 +149,6 @@ p {
   display: flex;
   margin-left: auto;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 .auth-nav .link {
   color: var(--basic-text-color);
@@ -152,11 +161,8 @@ p {
 
 /* герой */
 .hero {
-  display: flex;
   padding-top: 200px;
-  padding-left: 250px;
   padding-bottom: 200px;
-  padding-right: 250px;
   background-color: var(--bg-color);
   text-align: center;
 }
@@ -168,7 +174,9 @@ p {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  min-width: 696px;
+
+  max-width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -213,33 +221,40 @@ p {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+.title-main {
+  visibility: hidden;
+}
 /* чим ми займаємося */
-
+.section-work {
+  padding-top: 0;
+}
 .work {
   display: flex;
-  padding-top: 0;
   margin-left: calc(-1 * var(--card-set-marg));
-  margin-top: calc(-1 * var(--card-set-marg));
 }
 .work-items {
   flex-basis: calc(100% / 3 - var(--card-set-marg));
   margin-left: var(--card-set-marg);
-  margin-top: var(--card-set-marg);
 }
 
 /* команда */
+.team {
+  background-color: var(--secondary-bg-color);
+}
 
 .team-items {
   display: flex;
   margin-left: calc(-1 * var(--card-set-marg));
-  margin-top: calc(-1 * var(--card-set-marg));
 }
 
 .items-card {
   flex-basis: calc(100% / 4 - var(--card-set-marg));
   margin-left: var(--card-set-marg);
-  margin-top: var(--card-set-marg);
   overflow: hidden;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-items .title {
@@ -258,12 +273,6 @@ p {
   text-align: center;
 }
 
-.card-content {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
 .card-bottom {
   padding-top: var(--card-set-marg);
   padding-bottom: var(--card-set-marg);
@@ -277,9 +286,10 @@ p {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-logo {
-  margin-bottom: 20px;
+.contact-item:not(:last-child) {
+  margin-bottom: 9px;
 }
+
 .footer-address {
   color: var(--text-white-color);
   text-decoration: none;
@@ -291,6 +301,7 @@ p {
   text-decoration: none;
   font-style: normal;
 }
+
 .footer-address:hover,
 .footer-address:focus {
   color: var(--accent-color);
@@ -307,8 +318,8 @@ p {
   margin-right: 8px;
 }
 
-.filter-item {
-  margin-bottom: 34px;
+.filter {
+  margin-bottom: 56px;
 }
 
 .secondary {
@@ -325,6 +336,8 @@ p {
 .button .secondary:focus {
   background-color: var(--accent-color);
   color: var(--text-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button .secondary.current {
