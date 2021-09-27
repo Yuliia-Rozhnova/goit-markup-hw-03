@@ -74,6 +74,10 @@ ul {
   text-align: center;
 }
 
+.title-main {
+  visibility: hidden;
+}
+
 /* кнопки */
 .button {
   display: flex;
@@ -222,9 +226,7 @@ ul {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.title-main {
-  visibility: hidden;
-}
+
 /* чим ми займаємося */
 .section-work {
   padding-top: 0;
